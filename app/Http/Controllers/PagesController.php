@@ -22,12 +22,12 @@ class PagesController extends Controller
     
     public function about() 
     {
-        return "about page";
+        return view('about');
     }
 
     
     public function contact() 
     {
-        return "contact page";
+        return view('contact');
     }
 }

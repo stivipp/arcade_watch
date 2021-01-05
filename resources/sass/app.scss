@@ -1,0 +1,24 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bulma
+@import '~bulma/css/bulma.css';
+
+body {
+    font-size: 2rem;
+    text-align: center;
+    color: $yellow;
+    background: $body-bg;
+}
+
+.title {
+    font-size: 8em;
+    font-weight: bold;
+}
+
+ul, ol {
+    list-style: none;
+}
