@@ -9,7 +9,7 @@
 
     @section('sidebar')
 
-        <P>About me somethig here it is</P>
+        <P class="text-yellow-200">About me somethig here it is</P>
         
     @endsection
 

@@ -16,14 +16,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-700">
 
     <div id="app">
         <main>
              @yield('content')
         </main>
-
-        <example-component></example-component>
 
     </div>
 

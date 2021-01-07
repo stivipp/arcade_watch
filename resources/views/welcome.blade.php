@@ -3,13 +3,21 @@
     @section('content')
         
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+            <div class="pt-8 sm:justify-start sm:pt-0">
                 
-                <h1 class="h-16 p-3 w-auto text-gray-700 sm:h-20">{{ $title }}</h1>
+                <h1 class="h-16 p-3 w-auto sm:h-20 text-center text-5xl text-gray-600 bold">{{ $title }}</h1>
 
-                <ul class="text-gray-700 text-xl">
+                <ul class="">
                     @foreach ($posts as $post)
-                        <li class="">{{ $post }}</li>
+                        <li class="text-center">
+                            <h2 class="text-yellow-200 text-xl">{{ $post->title }}</h2>    
+                            <p class="text-sm text-white">{{ $post->text }}</p>    
+
+                            <small class="text-yellow-600">
+                                {{ $post->user->name }}
+                            </small>
+
+                        </li>
                     @endforeach
                 </ul>
 

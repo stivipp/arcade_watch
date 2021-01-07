@@ -4,21 +4,5 @@
 // Variables
 @import 'variables';
 
-// Bulma
-@import '~bulma/css/bulma.css';
-
-body {
-    font-size: 2rem;
-    text-align: center;
-    color: $yellow;
-    background: $body-bg;
-}
-
-.title {
-    font-size: 8em;
-    font-weight: bold;
-}
-
-ul, ol {
-    list-style: none;
-}
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
