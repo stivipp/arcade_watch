@@ -9,13 +9,21 @@
 
                 <ul class="">
                     @foreach ($posts as $post)
-                        <li class="text-center">
+                        <li class="my-8 text-center">
                             <h2 class="text-yellow-200 text-xl">{{ $post->title }}</h2>    
                             <p class="text-sm text-white">{{ $post->text }}</p>    
 
                             <small class="text-yellow-600">
                                 {{ $post->user->name }}
                             </small>
+
+                            @foreach ($post->comments as $comment)
+                                <br>
+                                <em class="text-sm text-yellow-200">
+                                    {{ $comment->text }}
+                                </em>
+                                
+                            @endforeach
 
                         </li>
                     @endforeach

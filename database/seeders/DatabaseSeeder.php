@@ -19,10 +19,10 @@ class DatabaseSeeder extends Seeder
        // $this->call(UsersTableSeeder::class);
        // $this->call(PostsTableSeeder::class);
 
-       factory(App\User::class, 5)->create()->each(function ($user) {
+       \App\Models\User::factory(5)->create()->each(function ($user) {
            for ($i = 0; $i < 5; $i++) {
-               $user->posts()->save(factory(App\Post::class)->make());
-               $user->comments()->save(factory(App\Comment::class)->make());
+               $user->posts()->save(\App\Models\Post::factory()->make());
+               $user->comments()->save(\App\Models\Comment::factory()->make());
            }
        });
 
