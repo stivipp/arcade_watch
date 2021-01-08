@@ -2,32 +2,16 @@
 
     @section('content')
         
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto my-4 sm:px-6 lg:px-8">
             <div class="pt-8 sm:justify-start sm:pt-0">
-                
-                <h1 class="h-16 p-3 w-auto sm:h-20 text-center text-5xl text-gray-600 bold">{{ $title }}</h1>
 
-                <ul class="">
+                <ol class="p-2 bg-gray-800 rounded-2xl">
                     @foreach ($posts as $post)
-                        <li class="my-8 text-center">
-                            <h2 class="text-yellow-200 text-xl">{{ $post->title }}</h2>    
-                            <p class="text-sm text-white">{{ $post->text }}</p>    
-
-                            <small class="text-yellow-600">
-                                {{ $post->user->name }}
-                            </small>
-
-                            @foreach ($post->comments as $comment)
-                                <br>
-                                <em class="text-sm text-yellow-200">
-                                    {{ $comment->text }}
-                                </em>
-                                
-                            @endforeach
-
+                        <li class="my-4 mx-2 p-2 bg-gray-700 rounded-2xl	">
+                            @include('article')
                         </li>
                     @endforeach
-                </ul>
+                </ol>
 
             </div>
         </div>

@@ -13,8 +13,7 @@ class PagesController extends Controller
          // return User::first()->posts; 
 
          return view('welcome', [
-            'title' => '(@_@)',
-            'posts' => Post::all()
+            'posts' => Post::latest()->get(),
      ]); 
 
        // return \DB::table('posts')->get();
