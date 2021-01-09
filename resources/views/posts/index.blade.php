@@ -8,7 +8,7 @@
                 <ol class="p-2 bg-gray-800 rounded-2xl">
                     @foreach ($posts as $post)
                         <li class="my-4 mx-2 p-2 bg-gray-700 rounded-2xl	">
-                            @include('posts.article')
+                            @include('posts.article', [ 'type' => 'listing' ] )
                         </li>
                     @endforeach
                 </ol>

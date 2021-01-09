@@ -20,7 +20,7 @@
 
     <header>
         <h1>
-            <a class="flex justify-center p-2 my-2  text-5xl text-gray-600 font-bold" href="#">(@_@)</a>
+            <a class="flex justify-center p-2 my-2  text-5xl text-gray-600 font-bold" href="/">(@_@)</a>
         </h1>
     </header>
 
