@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// auth
+// Auth::routes();
+
 // routes
 
-Route::get('/', [PagesController::class, 'home']);
-Route::get('about', [PagesController::class, 'about']);
-Route::get('contact', [PagesController::class, 'contact']);
+Route::get('/', [PostController::class, 'index']);
+
+// posts
+
+Route::resource('posts', PostController::class);
 
 
-// auth
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
