@@ -3,6 +3,7 @@
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // auth
 Auth::routes();
-Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('logout', [LoginController::class, 'logout']);
 
 // routes
 Route::get('/', [PostController::class, 'index']);
