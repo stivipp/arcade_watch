@@ -4,6 +4,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,14 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 // auth
-// Auth::routes();
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
 
 // routes
-
 Route::get('/', [PostController::class, 'index']);
 
 // posts
-
 Route::resource('posts', PostController::class);
 
 

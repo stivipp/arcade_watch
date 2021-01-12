@@ -1,6 +1,6 @@
 <article class="{{ $type }}">
     <header>
-        <h2 class="p-4 text-center text-2xl text-yellow-300 font-bold tracking-wider border-b-2  bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl">
+        <h2 class="py-2 pb-4 text-center text-2xl text-yellow-300 font-bold tracking-wider border-b-2  bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl">
            <a href="/posts/{{ $post->id }}">
                 {{ $post->title }}
             </a> 
@@ -8,7 +8,7 @@
         
     </header>
 
-    <p class="pb-4 px-4 pt-2 text-left text-white">
+    <p class="mt-2 py-4 px-4 pt-2 text-left text-white">
         {!! nl2br($post->text) !!}
     </p>
 

@@ -24,6 +24,15 @@
         </h1>
     </header>
 
+    @guest
+        <h1 class="text-lg text-yellow-200 font-bold text-center">Neprihlaseny</h1>
+    @endguest
+
+    @auth
+        <h1 class="text-lg text-yellow-200 font-bold text-center">You are LOGGED IN!</h1>
+        <h2 class="text-lg text-yellow-200 font-bold text-center">{{ auth()->user()->name }}</h2>
+    @endauth
+
 
     <div id="app">
         <main>
