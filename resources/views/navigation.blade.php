@@ -1,13 +1,13 @@
 
-<section class="">
-    <nav class="flex justify-end p-4 font-bold text-yellow-200">
+<section class="max-w-screen-2xl mx-auto">
+    <nav class="flex justify-end p-4 font-bold ">
         
         {{-- LOGIN/REGISTER LINKS --}}
         @guest
-            <a class="pr-2 hover:text-white focus:text-gray-400" href="{{ route('login') }}">login</a>
+            <a class="pr-2 text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('login') }}">login</a>
 
             @if (Route::has('register'))
-                <a class="hover:text-white focus:text-gray-400" href="{{ route('register') }}">register</a>              
+                <a class="text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('register') }}">register</a>              
             @endif
 
         @endguest
@@ -15,12 +15,12 @@
 
         @auth
             {{-- LOGGED IN USER --}}
-            <a class="pr-2 hover:text-white focus:text-gray-400" href="/users/{{ auth()->user()->id }}">
+            <a class="pr-2 text-yellow-200 hover:text-white focus:text-gray-400" href="/users/{{ auth()->user()->id }}">
                 @<strong>{{ auth()->user()->name }}</strong>
             </a>
             
             {{-- LOGOUT LINK --}}
-            <a class=" hover:text-white focus:text-gray-400" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <a class="text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 logout
             </a>
 
