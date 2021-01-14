@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 // auth
 Auth::routes();
-Route::get('logout', [LoginController::class, 'logout']);
+// Route::get('logout', [LoginController::class, 'logout']);
 
 // routes
 Route::get('/', [PostController::class, 'index']);

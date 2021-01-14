@@ -1,7 +1,9 @@
 
 <section>
 
-    @include('comments.create')
+    @auth
+        @include('comments.create')
+    @endauth
 
     <ol>
         @foreach ($post->comments as $comment)

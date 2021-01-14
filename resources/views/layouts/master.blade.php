@@ -16,13 +16,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+
 <body class="bg-gray-900">
 
     <header>
+        @include('navigation')
+
         <h1>
             <a class="flex justify-center p-2 my-2  text-5xl text-gray-600 font-bold" href="/">(@_@)</a>
         </h1>
+
     </header>
+
 
     @guest
         <h1 class="text-lg text-yellow-200 font-bold text-center">Neprihlaseny</h1>
@@ -30,7 +36,7 @@
 
     @auth
         <h1 class="text-lg text-yellow-200 font-bold text-center">You are LOGGED IN!</h1>
-        <h2 class="text-lg text-yellow-200 font-bold text-center">{{ auth()->user()->name }}</h2>
+        {{-- <h2 class="text-lg text-yellow-200 font-bold text-center">{{ auth()->user()->name }}</h2> --}}
     @endauth
 
 
@@ -38,7 +44,6 @@
         <main>
              @yield('content')
         </main>
-
     </div>
 
 
