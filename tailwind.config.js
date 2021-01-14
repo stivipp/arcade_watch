@@ -9,6 +9,9 @@ module.exports = {
         'light-blue': colors.lightBlue,
         cyan: colors.cyan,
       },
+      outline: {
+        gray: '1rem solid #c7c7c7',        
+      },
     },
   },
   variants: {

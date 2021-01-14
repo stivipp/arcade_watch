@@ -1,5 +1,8 @@
 
 <section>
+
+    @include('comments.create')
+
     <ol>
         @foreach ($post->comments as $comment)
             <li>
