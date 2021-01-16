@@ -23,7 +23,7 @@
     <header>
         @include('navigation')
 
-        <h1>
+        <h1 class="max-w-sm mx-auto">
             <a class="flex justify-center p-4 mt-2  text-8xl text-gray-600 font-bold hover:text-gray-800" href="/">(@_@)</a>
         </h1>
 

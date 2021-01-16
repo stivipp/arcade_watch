@@ -27,4 +27,7 @@ Route::get('/', [PostController::class, 'index']);
 // posts
 Route::resource('posts', PostController::class);
 
-
+// comments
+Route::resource('comments', PostController::class)->only([
+    'store', 'update', 'destroy'
+]);

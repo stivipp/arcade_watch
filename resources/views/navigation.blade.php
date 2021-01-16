@@ -1,5 +1,5 @@
 
-<section class="max-w-screen-2xl mx-auto">
+<section class="max-w-screen-2xl mx-auto bg-gray-800 rounded-b-2xl shadow-xl">
     <nav class="flex justify-end p-4 font-bold ">
         
         {{-- LOGIN/REGISTER LINKS --}}
