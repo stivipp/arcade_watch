@@ -1,13 +1,24 @@
 
-<section class="max-w-screen-2xl mx-auto bg-gray-800 rounded-b-2xl shadow-xl">
+<section class="max-w-screen-2xl mx-auto bg-gray-800 rounded-b-2xl shadow-md">
     <nav class="flex justify-end p-4 font-bold ">
         
         {{-- LOGIN/REGISTER LINKS --}}
         @guest
-            <a class="pr-2 text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('login') }}">login</a>
+            <a class="flex items-center pr-2 mr-2 text-gray-500 hover:text-white focus:text-gray-400 border-dashed border-r-2 border-gray-400"
+                 href="{{ route('login') }}">
+                <svg class="w-5 h-5 mr-1" fill="currentColor"  viewBox="0 0 512 512" >
+                    <path d="M218.668 240H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h202.668c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 0"/><path d="M138.668 320a15.89 15.89 0 01-11.309-4.691c-6.25-6.254-6.25-16.387 0-22.637l68.696-68.692-68.696-68.671c-6.25-6.254-6.25-16.387 0-22.637s16.383-6.25 22.637 0l80 80c6.25 6.25 6.25 16.383 0 22.637l-80 80A15.975 15.975 0 01138.668 320zm0 0M341.332 512c-23.531 0-42.664-19.137-42.664-42.668v-384c0-18.238 11.605-34.516 28.883-40.512L455.723 2.09C484.395-6.7 512 14.57 512 42.668v384c0 18.219-11.605 34.473-28.863 40.488L354.922 509.91c-4.672 1.45-9 2.09-13.59 2.09zm128-480c-1.387 0-2.559.172-3.816.555L337.879 75.113c-4.184 1.453-7.211 5.676-7.211 10.219v384c0 7.277 7.89 12.184 14.484 10.113l127.637-42.558c4.16-1.453 7.211-5.676 7.211-10.219v-384C480 36.801 475.223 32 469.332 32zm0 0"/><path d="M186.668 106.668c-8.832 0-16-7.168-16-16v-32c0-32.363 26.3-58.668 58.664-58.668h240c8.832 0 16 7.168 16 16s-7.168 16-16 16h-240c-14.7 0-26.664 11.969-26.664 26.668v32c0 8.832-7.168 16-16 16zm0 0M314.668 448h-85.336c-32.363 0-58.664-26.305-58.664-58.668v-32c0-8.832 7.168-16 16-16s16 7.168 16 16v32c0 14.7 11.965 26.668 26.664 26.668h85.336c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 0"/>
+                </svg>    
+                login
+            </a>
 
             @if (Route::has('register'))
-                <a class="text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('register') }}">register</a>              
+                <a class="flex items-center text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('register') }}">
+                    <svg class="h-5 w-5 mr-0.5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.894 24a.5.5 0 01-.491-.597l.707-3.535a.49.49 0 01.137-.256l7.778-7.778a1.503 1.503 0 012.121 0l1.414 1.414a1.501 1.501 0 010 2.121l-7.778 7.778a.497.497 0 01-.256.137l-3.535.707a.53.53 0 01-.097.009zm1.168-3.789l-.53 2.651 2.651-.53 7.671-7.671a.5.5 0 000-.707L21.44 12.54a.5.5 0 00-.707 0zm2.367 2.582h.01zM9.5 21h-7A2.502 2.502 0 010 18.5v-13C0 4.121 1.121 3 2.5 3h2a.5.5 0 010 1h-2C1.673 4 1 4.673 1 5.5v13c0 .827.673 1.5 1.5 1.5h7a.5.5 0 010 1zM16.5 12a.5.5 0 01-.5-.5v-6c0-.827-.673-1.5-1.5-1.5h-2a.5.5 0 010-1h2C15.879 3 17 4.121 17 5.5v6a.5.5 0 01-.5.5z"/><path d="M11.5 6h-6C4.673 6 4 5.327 4 4.5v-2a.5.5 0 01.5-.5h1.55C6.282.86 7.293 0 8.5 0s2.218.86 2.45 2h1.55a.5.5 0 01.5.5v2c0 .827-.673 1.5-1.5 1.5zM5 3v1.5c0 .275.225.5.5.5h6c.275 0 .5-.225.5-.5V3h-1.5a.5.5 0 01-.5-.5C10 1.673 9.327 1 8.5 1S7 1.673 7 2.5a.5.5 0 01-.5.5zM13.5 9h-10a.5.5 0 010-1h10a.5.5 0 010 1zM13.5 12h-10a.5.5 0 010-1h10a.5.5 0 010 1zM13.5 15h-10a.5.5 0 010-1h10a.5.5 0 010 1z"/>
+                    </svg>
+                    register
+                </a>              
             @endif
 
         @endguest
@@ -15,12 +26,20 @@
 
         @auth
             {{-- LOGGED IN USER --}}
-            <a class="pr-2 text-yellow-200 hover:text-white focus:text-gray-400" href="/users/{{ auth()->user()->id }}">
+            <a class="flex items-center pr-2 text-yellow-200 hover:text-white focus:text-gray-400 border-dashed border-r-2 border-gray-400" 
+                href="/users/{{ auth()->user()->id }}">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path  d="M10 10.9a4.31 4.31 0 004.303-4.306c0-2.372-1.93-4.302-4.303-4.302S5.696 4.223 5.696 6.594A4.31 4.31 0 0010 10.9zm0-7.569a3.268 3.268 0 013.266 3.263A3.27 3.27 0 0110 9.861a3.27 3.27 0 01-3.265-3.267c0-1.8 1.465-3.263 3.265-3.263zM10 12.503c-4.418 0-7.878 2.058-7.878 4.685a.518.518 0 101.039 0c0-1.976 3.132-3.646 6.84-3.646 3.707 0 6.838 1.671 6.838 3.646a.52.52 0 001.041 0c-.001-2.627-3.462-4.685-7.88-4.685z"/>
+                </svg>
                 @<strong>{{ auth()->user()->name }}</strong>
             </a>
             
             {{-- LOGOUT LINK --}}
-            <a class="text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <a class="flex items-center pl-2 text-gray-500 hover:text-white focus:text-gray-400" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path  d="M13.53 2.238a.77.77 0 10-.599 1.42 7.524 7.524 0 014.6 6.937c0 4.152-3.378 7.529-7.53 7.529-4.151 0-7.529-3.377-7.529-7.529A7.522 7.522 0 017.01 3.683a.771.771 0 10-.612-1.415 9.065 9.065 0 00-5.47 8.327c0 5.002 4.069 9.071 9.071 9.071 5.003 0 9.073-4.07 9.073-9.071a9.058 9.058 0 00-5.542-8.357z"/>
+                    <path  d="M9.999 7.616a.77.77 0 00.771-.771v-5.74a.77.77 0 10-1.542 0v5.74a.77.77 0 00.771.771z"/>
+                </svg>
                 logout
             </a>
 
