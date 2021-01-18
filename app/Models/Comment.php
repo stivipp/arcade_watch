@@ -10,6 +10,15 @@ class Comment extends Model
     use HasFactory;
 
     /**
+    * The attributes that are mass assignable.
+    */
+
+    protected $fillable = [
+        'text', 'post_id', 'user_id'
+    ];
+
+
+    /**
      * Get the Author of the blog post.
      */
 
@@ -19,6 +28,7 @@ class Comment extends Model
 
     }
 
+    
     /**
      * Get post this comment belongs to.
      */

@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Auth\LoginController;
+
 
 
 /*
@@ -28,6 +31,6 @@ Route::get('/', [PostController::class, 'index']);
 Route::resource('posts', PostController::class);
 
 // comments
-Route::resource('comments', PostController::class)->only([
+Route::resource('comments', CommentController::class)->only([
     'store', 'update', 'destroy'
 ]);
