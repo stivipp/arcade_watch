@@ -25,7 +25,6 @@
              </div>
 
             <input type="hidden" name="post_id" value="{{ $post->id }}">
-            <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
 
           </div>
         </div>
