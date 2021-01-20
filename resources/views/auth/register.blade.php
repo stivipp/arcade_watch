@@ -63,6 +63,7 @@
             </button>
         </div>   
         
+        @include('errors')
         
         </form>
 

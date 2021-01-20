@@ -5,6 +5,9 @@
 
        <div class="flex flex-wrap -mx-3 mb-6">
           <h2 class="px-4 pt-1 pb-2 text-white text-lg font-semibold">Pridaj Novy <span class="text-yellow-400">Comment</span></h2>
+          
+          @include('errors')
+
           <div class="w-full md:w-full px-3 mb-2 mt-2">
              <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize w-full h-20 py-2 px-3 
                                 font-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:bg-white"

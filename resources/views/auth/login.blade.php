@@ -77,6 +77,8 @@
                         </a>
                         @endif
                     </div>
+
+                    @include('errors')
                         
             
         </form>

@@ -49,10 +49,20 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+        // Validation of Forms.
+        request()->validate([
+            'text' => 'required',
+            'post_id' => 'required|integer|exists:posts,id',
+        ]);
+
+
+        // Creating Comments by user on specific Post.    
         auth()->user()->comments()->create(
             $request->all()
         );
+
  
+        // Redirection to main page.
         return redirect()->back();
 
     }
