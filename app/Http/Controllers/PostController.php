@@ -12,8 +12,10 @@ class PostController extends Controller
      */
     public function index()
     {
+        // return Post::with('comments')->latest()->get();
+
         return view('posts.index', [
-            'posts' => Post::latest()->get(),
+             'posts' => Post::with('comments', 'user')->latest()->get(),
         ]);
     }
 
@@ -38,9 +40,10 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', [
-            'post' => $post
-        ]); 
+        // EAGER LOADING
+        $post->load('comments', 'comments.user');
+
+        return view('posts.show', compact('post'));
     }
 
     /**
