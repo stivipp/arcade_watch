@@ -40,12 +40,15 @@
     @endauth
 
 
-    <div id="app">
-        <main>
-             @yield('content')
-        </main>
-    </div>
+   
+    <main id="app">
+        @yield('content')
 
+        <flash-message></flash-message>
+
+     </main>
+    
+    
 
     <footer>
         @include('footer')

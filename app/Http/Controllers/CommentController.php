@@ -61,7 +61,7 @@ class CommentController extends Controller
             $request->all()
         );
 
- 
+   
         // Redirection to main page.
         return redirect()->back();
 
