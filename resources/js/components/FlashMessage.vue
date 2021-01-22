@@ -1,6 +1,9 @@
 <template>
     <div>
-        <h1>You did it :D</h1>
+        <h1 class="h-max w-max p-4 font-semibold text-white text-xl bg-green-500 rounded-md shadow-md">
+            New COMMENT added, you did it :)
+        </h1>
+
 
     </div>
     
@@ -15,7 +18,7 @@
                 show: true
             }
         },
-
+ 
         created() {
 
         },

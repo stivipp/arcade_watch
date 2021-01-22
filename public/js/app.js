@@ -1855,6 +1855,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37384,7 +37387,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("You did it :D")])])
+    return _c("div", [
+      _c(
+        "h1",
+        {
+          staticClass:
+            "h-max w-max p-4 font-semibold text-white text-xl bg-green-500 rounded-md shadow-md"
+        },
+        [_vm._v("\n        New COMMENT added, you did it :)\n    ")]
+      )
+    ])
   }
 ]
 render._withStripped = true

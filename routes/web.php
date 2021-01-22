@@ -35,6 +35,4 @@ Route::resource('comments', CommentController::class)->only([
     'store', 'update', 'destroy'
 ]);
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

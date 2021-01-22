@@ -54,28 +54,28 @@
            
                     <div class="text-left px-2">
 
-                        <button class="my-2  py-2 px-4 bg-yellow-300 text-black font-semibold font-sm border-none rounded-md shadow-md 
+                        <div class="block mt-2">
+                            <input class="ml-1"
+                            type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+    
+                            <label class=" text-yellow-500 font-semibold" for="remember">
+                                Zapametaj si ma!
+                            </label>
+                        </div>
+                        
+                        <button class="mt-0 mb-2 ml-1 py-2 px-4 bg-yellow-300 text-black font-semibold font-sm border-none rounded-md shadow-md 
                         hover:bg-gray-500 hover:text-yellow-400 hover:shadow-none
                           focus:outline-none focus:ring-1 focus:ring-white"
                             type="submit">
                             Login
                         </button>
-
-                        <input class="ml-2"
-                            type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-    
-                        <label class=" text-yellow-500 font-semibold" for="remember">
-                            Zapametaj si ma!
-                        </label>
-
-                    </div>
-
-                    <div class="text-left px-2 pb-2">
+                    
                         @if (Route::has('password.request'))
-                        <a class="text-yellow-500 font-semibold hover:text-white focus:text-gray-300" href="{{ route('password.request') }}">
+                        <a class="ml-7 text-yellow-500 font-semibold hover:text-white focus:text-gray-300" href="{{ route('password.request') }}">
                             Zabudol si heslo ?
                         </a>
                         @endif
+
                     </div>
 
                     @include('errors')
