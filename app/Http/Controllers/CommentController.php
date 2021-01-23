@@ -63,7 +63,8 @@ class CommentController extends Controller
 
    
         // Redirection to main page.
-        return redirect()->back();
+        return redirect()->back()
+            ->with('flash', 'you totally Commented!');
 
     }
 

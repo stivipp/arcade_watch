@@ -36,3 +36,4 @@ Route::resource('comments', CommentController::class)->only([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

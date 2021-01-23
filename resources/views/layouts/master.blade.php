@@ -44,7 +44,7 @@
     <main id="app">
         @yield('content')
 
-        <flash-message></flash-message>
+        <flash-message text="{{ session('flash') }}"></flash-message>
 
      </main>
     
